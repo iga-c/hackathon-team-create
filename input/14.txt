@@ -1,0 +1,15 @@
+A 1.0
+B 1.0
+C 2.0
+D 3.0
+E 3.0
+F 3.0
+G 3.0
+H 3.0
+I 3.0
+J 4.0
+snakazawa 5.0
+uryoya 2.0
+kaseiaoki 3.0
+iga-c 5.0
+
