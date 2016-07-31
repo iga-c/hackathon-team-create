@@ -36,13 +36,8 @@ end
 def plannerDiffTeamValidate(team_array)
   planner_list = ["snakazawa", "uryoya", "kaseiaoki", "iga-c"] # とりあえずgithubのID
   team_array.each do |team|
-    count = 0
-    
-    team.each do |p|
-      count += 1 if planner_list.include?(p.name)
-    end
-
-    return false if 2 < count
+    targets = team.select { |p| planner_list.include?(p.name) }
+    return false if targets.length > 2
   end
 
   true
@@ -52,13 +47,8 @@ end
 def igaNValidate(team_array)
   iga_n_list = ["snakazawa", "iga-c"] # とりあえずgithubのID
   team_array.each do |team|
-    count = 0
-
-    team.each do |p|
-      count += 1 if iga_n_list.include?(p.name)
-    end
-    
-    return false if 2 == count
+    targets = team.select { |p| iga_n_list.include?(p.name) } 
+    return false if targets.length == 2
   end
 
   true
